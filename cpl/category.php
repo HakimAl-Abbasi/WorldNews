@@ -1,72 +1,86 @@
 <?php
 include "classes/DB.class.php";
-include'Controler/categories.cont.php';
-include 'Model/categoreis.mod.php';
-
-
-
+include'Controler/User.cont.php';
+include 'Model/User.mod.php';
 
 /*
-if(isset($_POST['dd'])){
+
+
+if (isset($_POST['ADD']))
+{
+
+
     $info = [
 
-        'Ca_name'          =>$_POST['Cat_Name'],
-        'create_by'        =>$_POST['create_by'],
-        'create_date'      =>$_POST['create_date'],
-        'updates'          =>$_POST['update_date'],
-        'create_status'    =>$_POST['category_status'],
-        'parent'           =>$_POST['parent']
-
-
-
+        'Username' => $_POST['FName'],
+        'User_Email' => $_POST['Email'],
+        'Password' => sha1($_POST['PDW']),
+        'Full_Name' => $_POST['FullName'],
+        'User_Phone' => $_POST['Phone'],
+        'Register_Date' => $_POST['RegisterDate'],
+        'User_GroupID' => $_POST['typeUser'],
+        'User_Status' => $_POST['Status']
     ];
+    $inserts = new User();
+
+    $inserts->InsertIntoUser($info);
 
 
-    $inserts = new categories();
-    $inserts->InsertIntoCategories($info);
-}*
-*/
+
+
+
+}*/
+
 ?>
-
-
 <!--
-            <div class="container">
-            <form action="" method="post">
-            <div class="form-group">
-            <label for="CName"> Category Name</label>
-            <input type="text" class="form-control"  id="Cat_Name " name ="Cat_Name" placeholder="Enter Category Name">
 
-            </div>
-            <div class="form-group">
-            <label for="create_by">Create By</label>
-            <input type="text" class="form-control" name="create_by" placeholder="Created By Name">
-            </div>
-            <div class="form-group">
-            <label for="CD">Create date </label>
-            <input type="Date"  name="create_date" class="form-control">
-            </div>
-            <div class="form-group">
-            <label for="PDW">Update  date </label>
-            <input type="Date" name="update_date" class="form-control">
-            </div>
-
-            <div class="form-group">
-            <label for="PDW">Category Status </label>
-            <input type="number"  name="category_status" class="form-control">
-            </div><div class="form-group">
-            <label for="PDW">parent </label>
-            <input type="number" name="parent" class="form-control">
-            </div>
+<div class="container">
 
 
+    <div class="mt-4"><h3> Add New User</h3></div>
+    <form action="" method="post" class="mt-5">
+        <div class="form-group">
+            <label for="FName">Name</label>
+            <input type="text" class="form-control" name="FName" placeholder="Enter Your Name" autocomplete="off">
+
+        </div>
+        <div class="form-group">
+            <label for="Email">Email address</label>
+            <input type="email" class="form-control" name="Email"
+                   placeholder="Enter email" autocomplete="off">
+            <div>
+                <div class="form-group">
+                    <label for="PDW">Password</label>
+                    <input type="password" class="form-control" name ="PDW" placeholder="Password" autocomplete="no-password">
+                </div>
+                <div class="form-group">
+                    <label for="FullName">Full Name</label>
+                    <input type="text" class="form-control" name="FullName" placeholder="Full Name" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="Phone">User Phone</label>
+                    <input type="text" class="form-control" name ="Phone" placeholder="Phone" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="RegisterDate">Register Date </label>
+                    <input type="date"  class="form-control" name="RegisterDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="typeUser">Type User</label>
+                    <input type="number" name="typeUser" class="form-control" placeholder="Stats number" ">
+                </div>
+
+                <div class="form-group">
+                    <label for="Status">Type Status</label>
+                    <input type="number" name="Status" class="form-control" placeholder="Stats number" ">
+                </div>
 
 
 
 
-            <input type="submit" name="dd" class="btn btn-primary">Insert</input>
-            </form>
+                <input type="submit" name="ADD"class="btn btn-primary mt-4" value="insert">
+    </form>
 
-            </div>
+</div>
 -->
-
-<input type="submit" name="del" value ="delete">

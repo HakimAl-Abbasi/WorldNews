@@ -17,7 +17,7 @@ $cat = new categories();
 
 foreach ($cat->getAllCategoryId($_GET['id']) as $catData)
 
-   echo $cat_id = $catData['cat_id'];
+    $cat_id = $catData['cat_id'];
 
 {
 

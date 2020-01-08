@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="" />
+    <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cpl/Controler/Posts.cont.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpl/Model/Posts.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/Controler/User.cont.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Controler/User.cont.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/Model/User.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Model/User.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/add-new-us.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/add-new-us.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/edit-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/edit-cat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/manage-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-cat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/manage-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-users.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +31,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Vc7IsWnLIaaTPCCjC8SCuMta6B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -64,11 +79,26 @@
       <workItem from="1577991072558" duration="2985000" />
       <workItem from="1578144406423" duration="4663000" />
       <workItem from="1578162747908" duration="31808000" />
-      <workItem from="1578291144063" duration="15839000" />
+      <workItem from="1578291144063" duration="16371000" />
+      <workItem from="1578417330927" duration="8010000" />
+      <workItem from="1578464432511" duration="23021000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
