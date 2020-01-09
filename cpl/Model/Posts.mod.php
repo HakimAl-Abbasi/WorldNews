@@ -23,7 +23,7 @@ class Post_Model
 
     const  INSERT_TO_CATEGORIES_TABLE = "INSERT INTO posts
                                             (
-                                            cat_name,
+                                            Post_Title,
                                             cat_description,
                                             cat_status,
                                             create_by,
@@ -36,7 +36,7 @@ class Post_Model
                                             ) 
                                          VALUES 
                                              (
-                                             :cat_name,
+                                             :Post_Title,
                                              :cat_description,
                                              :cat_status,
                                              :create_by,
@@ -50,7 +50,7 @@ class Post_Model
 
     const  UPDATE_CATEGORY="UPDATE posts
                       SET
-                      cat_name =:cat_name,
+                      Post_Title =:Post_Title,
                       cat_description =:cat_description,
                       cat_status =:cat_status,
                       visibility=:visibility,
@@ -66,13 +66,13 @@ class Post_Model
 
     const DELETE_CATEGORY ="DELETE FROM posts WHERE Post_ID	 =:Post_ID	";
 
-    const ACTIVATE_CATEGORY = "UPDATE posts SET cat_status = 1 WHERE Post_ID	 =:Post_ID	";
+    const ACTIVATE_CATEGORY = "UPDATE posts SET cat_status = 1 WHERE Post_ID=:Post_ID	";
 
 
 
 
     public $PostID =":Post_ID";
-    public $cat_name =":nameCategory";
+    public $PostTitle =":Post_Title";
     public $cat_description = ":at_description";
     public $cat_status = ":status";
     public $create_by =":createBy";

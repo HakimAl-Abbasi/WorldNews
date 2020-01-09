@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cpl/Controler/Post.Cont.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/Controler/Posts.cont.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/Controler/comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Controler/comment.Cont.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cpl/Model/Posts.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Model/Posts.mod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/manage-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/bootstrap/scss/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/bootstrap/scss/_print.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/chart.js/dist/Chart.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/chart.js/dist/Chart.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/chart.js/dist/Chart.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/chart.js/dist/Chart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/chart.js/docs/configuration/legend.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/chart.js/docs/configuration/legend.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/chart.js/src/core/core.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/chart.js/src/core/core.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/chart.js/src/plugins/plugin.legend.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/chart.js/src/plugins/plugin.legend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/chart.js/test/specs/plugin.legend.tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/chart.js/test/specs/plugin.legend.tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/datatables.net/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/datatables.net/js/jquery.dataTables.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/flot/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/flot/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/gaugejs/assets/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/gaugejs/assets/prettify.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/gmaps/docs/styles/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/gmaps/docs/styles/prettify.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/dist/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/dist/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/external/sizzle/dist/sizzle.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/external/sizzle/dist/sizzle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/attributes/attr.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/attributes/attr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/attributes/prop.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/attributes/prop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/css.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/css.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/event.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/event.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/event/trigger.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/event/trigger.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/exports/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/exports/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/selector-native.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jquery/src/selector-native.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jszip/dist/jszip.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jszip/dist/jszip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jszip/documentation/api_jszip/file_data.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jszip/documentation/api_jszip/file_data.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jszip/documentation/api_jszip/generate_async.md" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jszip/documentation/api_jszip/generate_async.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jszip/lib/generate/ZipFileWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jszip/lib/generate/ZipFileWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jszip/lib/generate/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jszip/lib/generate/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jszip/lib/stream/StreamHelper.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jszip/lib/stream/StreamHelper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/jszip/lib/zipEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/jszip/lib/zipEntry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/vendors/pdfmake/build/pdfmake.js" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/vendors/pdfmake/build/pdfmake.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +74,7 @@
       <workItem from="1578291144063" duration="16371000" />
       <workItem from="1578417330927" duration="8010000" />
       <workItem from="1578464432511" duration="26741000" />
-      <workItem from="1578543527875" duration="12409000" />
+      <workItem from="1578543527875" duration="12969000" />
     </task>
     <servers />
   </component>
