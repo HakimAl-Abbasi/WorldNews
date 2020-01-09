@@ -14,7 +14,7 @@ class categories extends DB
         return $db;
     }
 
-    public function getAllCategoryId($id)
+    public function getCategoryId($id)
     {
         $model = new categories_mode();
         $sql = $model::GET_ALL_CATEGORIES_ID;

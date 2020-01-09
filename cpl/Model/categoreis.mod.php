@@ -23,8 +23,8 @@ class categories_mode {
 
     //insert into categories
     const INSERT_ALL_CATEGORIES ='INSERT INTO categories
-                                    (Ca_name,create_by,create_date,updates,create_status,parent)
-                                    VALUES (:Ca_name,:create_by,:create_date,:updates,:create_status,:parent)';
+                                    (Cat_name,updated_by,update_date,category_status,parent)
+                                    VALUES (:Cat_name,:updated_by,:update_date,:category_status,:parent)';
 
 
 
@@ -41,7 +41,7 @@ const DELETE_CATEGORIES_DATA ='DELETE FROM categories WHERE cat_id =:cat_id';
 
 // Update Categories
 
-const UPDATE_CATEGORIES_ID ='UPDATE categories SET cat_id=:cat_id,Ca_name=:ca_Ca_name,create_by:create_by,create_date:create_date,updates:updates,create_status:create_status,parent:parent WHERE cat_id =:cat_id';
+const UPDATE_CATEGORIES_ID ='UPDATE categories SET cat_id=:cat_id,Cat_name=:updated_by,:update_date,:category_status,:parent  WHERE cat_id =:cat_id';
 
 
 
