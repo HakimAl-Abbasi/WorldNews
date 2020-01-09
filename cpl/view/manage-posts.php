@@ -11,10 +11,6 @@ if($do == 'Manage') {
     ?>
 
 
-
-
-
-
     <div class="breadcrumbs">
         <div class="col-sm-4">
             <div class="page-header float-left">
@@ -37,14 +33,15 @@ if($do == 'Manage') {
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
-                                <a href="manage-cat.php?do=addNew" class="btn btn-info fa fa-edit float-right">Add New User</a>
+                                <a href="manage-cat.php?do=addNew" class="btn btn-info fa fa-edit float-right">Add New
+                                    User</a>
 
                                 <thead>
                                 <tr>
                                     <th>#</th>
 
                                     <th>&ensp;&ensp; المنشور</th>
-                                    <th>المقدمة </th>
+                                    <th>المقدمة</th>
 
                                     <th>المحتوى</th>
                                     <th>صورة المحتوى</th>
@@ -69,11 +66,11 @@ if($do == 'Manage') {
                                     $PostContent = $Posts['Post_Content'];
                                     $PostImage = $Posts['Post_img'];
                                     $CreateBy = $Posts['Create_by'];
-                                    $CreateDate =$Posts['Create_Date'];
-                                    $UpdatesDate =$Posts['Updates_date'];
-                                    $PublishDate =$Posts['Publish_Date'];
-                                    $CatID       =$Posts['cat_id'];
-                                    $PostStatus  =$Posts['Post_Status'];
+                                    $CreateDate = $Posts['Create_Date'];
+                                    $UpdatesDate = $Posts['Updates_date'];
+                                    $PublishDate = $Posts['Publish_Date'];
+                                    $CatID = $Posts['cat_id'];
+                                    $PostStatus = $Posts['Post_Status'];
 
                                     if ($PostStatus = $Posts['Post_Status'] > 0) {
 
@@ -90,15 +87,15 @@ if($do == 'Manage') {
                                         $Status = $Posts['Post_Status'] = $an;
 
                                     }
-                                        /*
-                                    if ($cStatus  > 0) {
-                                        $admin = 'فرعي';
-                                        $cStatus = $categories['parent'] = $admin;
+                                    /*
+                                if ($cStatus  > 0) {
+                                    $admin = 'فرعي';
+                                    $cStatus = $categories['parent'] = $admin;
 
-                                    } else {
-                                        $u = 'رئيسي';
-                                        $cStatus = $categories['parent'] = $u;
-                                    }
+                                } else {
+                                    $u = 'رئيسي';
+                                    $cStatus = $categories['parent'] = $u;
+                                }
 */
 
                                     ?>
@@ -118,17 +115,21 @@ if($do == 'Manage') {
                                         <?php
 
 
-
                                         ?>
                                         <td>
                                             <table>
                                                 <tr>
-                                            <td><a href="manage-posts.php?do=Edit&postid=<?php echo $PostID ?>" name="Edit"
-                                                                             class="btn btn-info  fa fa-edit"> Edit</a></td>
-                                           <td> <a href="manage-posts.php?do=delete&postid=<?php echo $PostID ?>"
-                                                   name=" delete" class="btn btn-danger fa fa-trash-o"> Delete</a></td>
-                                           <td><a href="manage-posts.php?do=Update&postid=<?php echo $PostID  ?>" class="btn btn-success fa fa-adn">
-                                                   Active</a></td>
+                                                    <td><a href="manage-posts.php?do=Edit&postid=<?php echo $PostID ?>"
+                                                           name="Edit"
+                                                           class="btn btn-info  fa fa-edit"> Edit</a></td>
+                                                    <td>
+                                                        <a href="manage-posts.php?do=delete&postid=<?php echo $PostID ?>"
+                                                           name=" delete" class="btn btn-danger fa fa-trash-o">
+                                                            Delete</a></td>
+                                                    <td>
+                                                        <a href="manage-posts.php?do=Update&postid=<?php echo $PostID ?>"
+                                                           class="btn btn-success fa fa-adn">
+                                                            Active</a></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -158,31 +159,55 @@ if($do == 'Manage') {
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <?php
-
 }
 
-elseif ($do =='addNew') {
+    elseif ($do =='addNew') {
+
+    $in_data =' <div class="alert alert-primary" role="alert">data inserted</div>';
+    $ino_data =' <div class="alert alert-danger" role="alert">not insert</div>';
+    /*
+    $info = [
+         $PostID =$_POST[''];
+         $PostTitle=$_POST[''];
+         $PostIntro =$_POST[''];
+         $PostContent ==$_POST[''];
+         $PostImage,
+         $CreateBy,
+         $CreateDate,
+        $UpdatesDate,
+        $PublishDate,
+        $CatID,
+        $PostStatus
+
+
+
+    ];*/
+
+    if(isset($_POST['dd'])){
+        $info = [
+            'Post_ID'           =>   $PostID,
+            'Post_Title'        =>   $PostTitle,
+            'Post_Intro'        =>    $PostIntro,
+            'Post_Content'      =>   $PostContent,
+            'Post_img'          =>   $PostImage,
+            'Create_by'         =>   $CreateBy,
+            'Create_Date'       =>   $CreateDate,
+            'Updates_date'      =>    $UpdatesDate,
+            'Publish_Date'      =>   $PublishDate,
+            'cat_id'            =>   $CatID,
+            'Post_Status'       =>   $PostStatus
+
+
+
+        ];
+    }
+
+
+
+
+
+
 
     ?>
 

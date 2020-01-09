@@ -1,63 +1,112 @@
-<!-- Preloader Start -->
 <?php
 include "cpl/classes/DB.class.php";
 include'cpl/Controler/categories.cont.php';
 include 'cpl/Model/categoreis.mod.php';
+
 ?>
-<div id="preloader">
-    <div class="preload-content">
-        <div id="world-load"></div>
-    </div>
-</div>
-<!-- Preloader End -->
 
-<!-- ***** Header Area Start ***** -->
 <header class="header-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-lg">
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="index.php">WORLD NEWS </a>
+    <!-- Navbar Area -->
+    <div class="newsbox-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container-fluid">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between " id="newsboxNav">
+
+                    <!-- Nav brand -->
+                    <a href="index.php" class="nav-brand ">AlabbasiNews</a>
+
                     <!-- Navbar Toggler -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#worldNav" aria-controls="worldNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <!-- Navbar -->
-                    <div class="collapse navbar-collapse" id="worldNav">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.php">Home </a>
-                            </li>
-                          <?php
-                            $category = new categories();
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
 
-                            foreach ($category->getAllMainNamesCategories() as $catName) {
-                                $MainName = $catName['Ca_name'];
-                                $cat_id = $catName['cat_id'];
+                    <!-- Menu -->
+                    <div class="classy-menu">
 
-
-                                ?>
-
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.php?id=<?php echo $cat_id;?>"><?php echo $MainName;?></a>
-                                </li>
-                                <?php
-                            }
-                            ?>
-                        </ul>
-                        <!-- Search Form  -->
-                        <div id="search-wrapper">
-                            <form action="#">
-                                <input type="text" id="search" placeholder="Search something...">
-                                <div id="close-icon"></div>
-                                <input class="d-none" type="submit" value="">
-                            </form>
+                        <!-- Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                         </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <?php
+                                $category = new categories();
+                                foreach ($category->getAllMainNamesCategories() as $categories) {
+
+                                    $MainName = $categories['Cat_name'];
+
+                                    ?>
+
+                                    <li><a href="#"><?php echo $MainName;?></a></li>
+                                    <?php
+                                }
+                                ?>
+                                <!--
+                                <li><a href="#">Local News</a></li>
+                                <li><a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="index.php">Home</a></li>
+                                        <li><a href="catagory.php">Catagory</a></li>
+                                        <li><a href="single-post.php">Single Post</a></li>
+                                        <li><a href="contact.php">Contact</a></li>
+                                        <li><a href="elements.php">Elements</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Sport</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Archery</a></li>
+                                        <li><a href="#">Badminton</a></li>
+                                        <li><a href="#">Baseball</a></li>
+                                        <li><a href="#">Boxing</a></li>
+                                        <li><a href="#">Climbing</a></li>
+                                        <li><a href="#">Cricket</a></li>
+                                        <li><a href="#">Football</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Lifestyle</a></li>-->
+                            </ul>
+
+
+                        </div>
+                        <!-- Nav End -->
+
                     </div>
                 </nav>
             </div>
         </div>
     </div>
 </header>
-<!-- ***** Header Area End ***** -->
+<!-- ##### Header Area End ##### -->
 
+
+
+
+
+
+
+<!-- ##### Breaking News Area Start ##### -->
+<section class="breaking-news-area clearfix">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- Breaking News Widget -->
+                <div class="breaking-news-ticker d-flex flex-wrap align-items-center">
+                    <div class="title">
+                        <h6>Trending</h6>
+                    </div>
+                    <div id="breakingNewsTicker" class="ticker">
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum.</a></li>
+                            <li><a href="#">Welcome to Colorlib Family.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Breaking News Area End ##### -->
