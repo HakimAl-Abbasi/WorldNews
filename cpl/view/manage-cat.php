@@ -5,7 +5,7 @@ include'../Controler/categories.cont.php';
 
 $do =isset($_GET['do'])?$_GET['do']:'Manage';
 
-// start mange page
+
 if($do == 'Manage') {
     ?>
 
@@ -14,7 +14,7 @@ if($do == 'Manage') {
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1> ادارة الاقسام</h1>
+                    <h1> ادارة المنشورات</h1>
                 </div>
             </div>
         </div>

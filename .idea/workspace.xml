@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="" />
+    <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/manage-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-cat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/manage-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-posts.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +75,7 @@
       <workItem from="1578291144063" duration="16371000" />
       <workItem from="1578417330927" duration="8010000" />
       <workItem from="1578464432511" duration="26741000" />
-      <workItem from="1578543527875" duration="13029000" />
+      <workItem from="1578543527875" duration="15644000" />
     </task>
     <servers />
   </component>
