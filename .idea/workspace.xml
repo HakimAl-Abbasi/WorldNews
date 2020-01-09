@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/Controler/categories.cont.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Controler/categories.cont.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/Model/categoreis.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Model/categoreis.mod.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/add-new-cat.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/charts-chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/charts-chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/charts-flot.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/charts-flot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/charts-peity.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/charts-peity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/font-fontawesome.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/font-fontawesome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/font-themify.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/font-themify.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/forms-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/forms-basic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/includes/header-nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/includes/header-nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/manage-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-cat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/maps-gmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/maps-gmap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/maps-vector.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/maps-vector.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-alerts.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-alerts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-badges.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-badges.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-posts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-cards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-grids.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-grids.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-modals.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-modals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-progressbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-progressbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-social-buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-social-buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-switches.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-switches.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-tabs.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-tabs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/ui-typgraphy.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/ui-typgraphy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/view/widgets.html" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/widgets.html" afterDir="false" />
-    </list>
+    <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +71,7 @@
       <workItem from="1578291144063" duration="16371000" />
       <workItem from="1578417330927" duration="8010000" />
       <workItem from="1578464432511" duration="26741000" />
-      <workItem from="1578543527875" duration="3267000" />
+      <workItem from="1578543527875" duration="3531000" />
     </task>
     <servers />
   </component>
