@@ -62,18 +62,18 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i> Categories</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-th"></i><a href="manage-cat.php">manage category</a></li>
-                        <li><i class="menu-icon fa fa-th"></i><a href="add-new-cat.php">Add new</a></li>
-                        <
+
+
                     </ul>
                 </li>
 
-                <h3 class="menu-title">Icons</h3><!-- /.menu-title -->
+                <h3 class="menu-title"> manege comments</h3><!-- /.menu-title -->
 
                 <li class="menu-item-has-children dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Icons</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>manege comments</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="menu-icon fa fa-fort-awesome"></i><a href="font-fontawesome.html">Font Awesome</a></li>
-                        <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Themefy Icons</a></li>
+                        <li><i class="menu-icon fa fa-fort-awesome"></i><a href="comments.php">comments</a></li>
+
                     </ul>
                 </li>
                 <li>

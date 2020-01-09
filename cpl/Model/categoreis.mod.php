@@ -41,7 +41,7 @@ const DELETE_CATEGORIES_DATA ='DELETE FROM categories WHERE cat_id =:cat_id';
 
 // Update Categories
 
-const UPDATE_CATEGORIES_ID ='UPDATE categories SET cat_id=:cat_id,Cat_name=:updated_by,:update_date,:category_status,:parent  WHERE cat_id =:cat_id';
+const UPDATE_CATEGORIES_ID ='UPDATE categories SET cat_id =:cat_id, updated_by =:updated_by, update_date =:update_date, category_status =:category_status, parent =:parent  WHERE cat_id =:cat_id';
 
 
 

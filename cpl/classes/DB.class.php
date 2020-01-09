@@ -67,6 +67,7 @@ class DB
         try {
             $this->stmt = $this->pdo->prepare($sql);
             $this->stmt->execute($info);
+            $this->stmt->fetchAll();
         } catch (Exception $ex) {
             die($ex->getMessage());
         }
