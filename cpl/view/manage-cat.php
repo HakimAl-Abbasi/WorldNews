@@ -254,7 +254,8 @@ elseif ($do =='Edit')
      *
      */
     $cat_id = isset($_GET['cat_id']) && is_numeric($_GET['cat_id']) ? intval($_GET['cat_id']) : 0;
-    foreach ($category->getCategoryId($_GET['cat_id']) as $cat)
+    $categoryS = new categories();
+    foreach ($categoryS->getCategoryId($_GET['cat_id']) as $cat)
     {
         $catName              = $cat['Cat_name'];
         $updatedBy            = $cat['updated_by'];
