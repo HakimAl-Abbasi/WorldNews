@@ -97,13 +97,7 @@ if($do == 'Manage') {
 
                                         <?php
 
-                                        if (isset($_GET['do']) == 'delete') {
-                                            $id = $_GET['cat_id'];
 
-                                            $del = new categories();
-
-                                            $del->deleteCategory($id);
-                                        }
 
                                         ?>
                                         <td>
@@ -241,8 +235,7 @@ elseif ($do =='addNew') {
 
     <?php
 }
-elseif ($do =='Edit')
-{
+elseif ($do =='Edit') {
 
     /*
      *  'Cat_name'          =>$_POST['Cat_Name'],
@@ -253,105 +246,110 @@ elseif ($do =='Edit')
      *
      *
      */
+    if (isset($_POST['Update'])) {
+
+        $cat_id = isset($_GET['cat_id']) && is_numeric($_GET['cat_id']) ? intval($_GET['cat_id']) : 0;
+        $categoryS = new categories();
+        foreach ($categoryS->getCategoryId($_GET['catid']) as $cats) {
+            $catName = $cats['Cat_name'];
+            $updatedBy = $cats['updated_by'];
+            $updatedDate = $cats['update_date'];
+            $categoryStatus = $cats['category_status'];
+            $parent = $cats['parent'];
+
+
+            if ($categoryStatus = 0) {
+
+
+                $active = "Active";
+
+                $categoryStatus = $cats['category_status'] = $active;
+
+
+            } else {
+
+                $an = "not Active";
+
+                $categoryStatus = $cats['category_status'] = $an;
+
+            }
+
+            if ($parent = 0) {
+                $admin = 'فرعي';
+                $parent = $cat['parent'] = $admin;
+
+            } else {
+                $u = 'رئيسي';
+                $parent = $cats['parent'] = $u;
+            }
+
+
+            ?>
+
+
+            <div class="container">
+                <div>
+                    <a href="manage-cat.php" class="btn btn-outline-info fa fa-back">Back</a>
+                </div>
+                <form action="" method="Post">
+                    <div class="form-group">
+                        <label for="CName"> Category Name</label>
+                        <input type="text" class="form-control" id="Cat_Name " name="Cat_Name" value="">
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="create_by">Updated By</label>
+                        <input type="text" class="form-control" name="create_by" value="<?php echo $catName; ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="CD">Updated date </label>
+                        <input type="Date" name="create_date" class="form-control" value="dfdf">
+                    </div>
+
+                    <div class="form-group">
+
+                        <select class="form-control">
+
+
+                            <option value="رئيسي" <?php if ($parent == 'رئيسي') echo 'selected'; ?>>رئيسي
+                            </option>
+                            <option value="فرعي" <?php if ($parent == 'فرعي') echo 'selected'; ?>>فرعي
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+
+                        <select class="form-control">
+
+
+                            <option value="Active" <?php if ($categoryStatus == 'Active') echo 'selected'; ?>>
+                                Active
+                            </option>
+                            <option value="NotActive" <?php if ($categoryStatus == 'NotActive') echo 'selected'; ?>>
+                                Not Active
+                            </option>
+                        </select>
+                    </div>
+
+
+                    <input type="submit" name="Update" class="btn btn-primary" value="Save">
+                </form>
+
+            </div>
+
+
+            <?php
+        }
+    }
+}
+if (isset($_GET['do']) == 'delete') {
     $cat_id = isset($_GET['cat_id']) && is_numeric($_GET['cat_id']) ? intval($_GET['cat_id']) : 0;
-    $categoryS = new categories();
-    foreach ($categoryS->getCategoryId($_GET['cat_id']) as $cat)
-    {
-        $catName              = $cat['Cat_name'];
-        $updatedBy            = $cat['updated_by'];
-        $updatedDate          = $cat['update_date'];
-        $categoryStatus       = $cat['category_status'];
-        $parent                = $cat['parent'];
-
-    }
-
-    if ($Status = $cat['category_status'] > 0) {
 
 
-        $active = "Active";
+    $del = new categories();
 
-        $Status = $cat['category_status'] = $active;
-
-
-    } else {
-
-        $an = "not Active";
-
-        $Status = $cat['category_status'] = $an;
-
-    }
-
-    if ($parent  > 0) {
-        $admin = 'فرعي';
-        $parent = $cat['parent'] = $admin;
-
-    } else {
-        $u = 'رئيسي';
-        $parent = $cat['parent'] = $u;
-    }
-
-
-?>
-
-
-    <div class="container">
-        <div>
-            <a href="manage-cat.php" class="btn btn-outline-info fa fa-back">Back</a>
-        </div>
-        <form action="" method="Post">
-            <div class="form-group">
-                <label for="CName"> Category Name</label>
-                <input type="text" class="form-control"  id="Cat_Name " name ="Cat_Name" value="<?php echo $catName?>">
-
-            </div>
-            <div class="form-group">
-                <label for="create_by">Updated By</label>
-                <input type="text" class="form-control" name="create_by" placeholder="Created By Name">
-            </div>
-            <div class="form-group">
-                <label for="CD">Updated  date </label>
-                <input type="Date"  name="create_date" class="form-control">
-            </div>
-
-            <div class="form-group">
-
-                <select class="form-control">
-
-
-                    <option value="رئيسي" <?php if ($parent == 'رئيسي') echo 'selected'; ?>>رءيسي
-                    </option>
-                    <option value="فرعي" <?php if ($parent == 'فرعي') echo 'selected'; ?>>فرعي
-                    </option>
-                </select>
-            </div>
-            <div class="form-group">
-
-                <select class="form-control">
-
-
-                    <option value="Active" <?php if ($Status == 'Active') echo 'selected'; ?>>
-                        Active
-                    </option>
-                    <option value="NotActive" <?php if ($Status == 'NotActive') echo 'selected'; ?>>
-                        Not Active
-                    </option>
-                </select>
-            </div>
-
-
-
-
-
-
-
-            <input type="submit" name="dd" class="btn btn-primary" value="Insert">
-        </form>
-
-    </div>
-
-
-
-    <?php
+    $del->deleteCategory('catid');
 }
 ?>
 
