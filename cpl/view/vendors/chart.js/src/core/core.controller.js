@@ -699,7 +699,7 @@ module.exports = function(Chart) {
 					data: [],
 					dataset: null,
 					controller: null,
-					hidden: null,			// See isDatasetVisible() comment
+					hidden: null,			// See isDatasetVisible() comment.Cont
 					xAxisID: null,
 					yAxisID: null
 				};

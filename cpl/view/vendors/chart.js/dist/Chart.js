@@ -1444,11 +1444,11 @@ for (var func in conversions) {
   // export rgb2hsl and ["rgb"]["hsl"]
   convert[from] = convert[from] || {};
 
-  convert[from][to] = convert[func] = (function(func) { 
+  convert[from][to] = convert[func] = (function(func) {
     return function(arg) {
       if (typeof arg == "number")
         arg = Array.prototype.slice.call(arguments);
-      
+
       var val = conversions[func](arg);
       if (typeof val == "string" || val === undefined)
         return val; // keyword
@@ -1476,12 +1476,12 @@ Converter.prototype.routeSpace = function(space, args) {
    }
    // color.rgb(10, 10, 10)
    if (typeof values == "number") {
-      values = Array.prototype.slice.call(args);        
+      values = Array.prototype.slice.call(args);
    }
 
    return this.setValues(space, values);
 };
-  
+
 /* Set the values for a space, invalidating cache */
 Converter.prototype.setValues = function(space, values) {
    this.space = space;
@@ -4515,7 +4515,7 @@ module.exports = function(Chart) {
 					data: [],
 					dataset: null,
 					controller: null,
-					hidden: null,			// See isDatasetVisible() comment
+					hidden: null,			// See isDatasetVisible() comment.Cont
 					xAxisID: null,
 					yAxisID: null
 				};
@@ -11391,7 +11391,7 @@ defaults._set('global', {
 			var ci = this.chart;
 			var meta = ci.getDatasetMeta(index);
 
-			// See controller.isDatasetVisible comment
+			// See controller.isDatasetVisible comment.Cont
 			meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
 
 			// We hid a dataset ... rerender the chart

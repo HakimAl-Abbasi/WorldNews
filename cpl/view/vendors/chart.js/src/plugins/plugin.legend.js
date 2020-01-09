@@ -21,7 +21,7 @@ defaults._set('global', {
 			var ci = this.chart;
 			var meta = ci.getDatasetMeta(index);
 
-			// See controller.isDatasetVisible comment
+			// See controller.isDatasetVisible comment.Cont
 			meta.hidden = meta.hidden === null ? !ci.data.datasets[index].hidden : null;
 
 			// We hid a dataset ... rerender the chart

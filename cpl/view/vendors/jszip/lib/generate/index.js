@@ -23,7 +23,7 @@ var getCompression = function (fileCompression, zipCompression) {
  * Create a worker to generate a zip file.
  * @param {JSZip} zip the JSZip instance at the right root level.
  * @param {Object} options to generate the zip file.
- * @param {String} comment the comment to use.
+ * @param {String} comment the comment.Cont to use.
  */
 exports.generateWorker = function (zip, options, comment) {
 

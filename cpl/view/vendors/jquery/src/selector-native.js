@@ -153,7 +153,7 @@ jQuery.extend( {
 			// If no nodeType, this is expected to be an array
 			while ( ( node = elem[ i++ ] ) ) {
 
-				// Do not traverse comment nodes
+				// Do not traverse comment.Cont nodes
 				ret += jQuery.text( node );
 			}
 		} else if ( nodeType === 1 || nodeType === 9 || nodeType === 11 ) {
@@ -164,7 +164,7 @@ jQuery.extend( {
 			return elem.nodeValue;
 		}
 
-		// Do not include comment or processing instruction nodes
+		// Do not include comment.Cont or processing instruction nodes
 
 		return ret;
 	},

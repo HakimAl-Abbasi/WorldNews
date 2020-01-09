@@ -197,7 +197,7 @@ StreamHelper.prototype = {
         if (this._outputType !== "nodebuffer") {
             // an object stream containing blob/arraybuffer/uint8array/string
             // is strange and I don't know if it would be useful.
-            // I you find this comment and have a good usecase, please open a
+            // I you find this comment.Cont and have a good usecase, please open a
             // bug report !
             throw new Error(this._outputType + " is not supported by this method");
         }

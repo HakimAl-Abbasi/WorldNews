@@ -2,11 +2,9 @@
 @include('../includes/loader.inc.php');
 @include('../Model/Posts.mod.php');
 
-
-class PostController extends DB
+class Cont extends DB
 {
-
-    public function getAllPosts()
+    public function getAllComment()
     {
         $model = new categories_mode();
         $sql = $model::GET_ALL_CATEGORIES;
@@ -15,7 +13,7 @@ class PostController extends DB
         return $db;
     }
 
-    public function getPostId($id)
+    public function getCommentId($id)
     {
         $model = new categories_mode();
         $sql = $model::GET_ALL_CATEGORIES_ID;
@@ -26,7 +24,8 @@ class PostController extends DB
 
 
 
-    public function InsertPost($info)
+
+    public function InsertIntoComment($info)
     {
 
         $model = new categories_mode();
@@ -38,7 +37,7 @@ class PostController extends DB
 
     }
 
-    public  function deletePost($id)
+    public  function deleteComment($id)
     {
         $model = new categories_mode();
         $sql = $model::DELETE_CATEGORIES_DATA;
@@ -49,7 +48,7 @@ class PostController extends DB
 
 
 
-    public function UpdatePost($id)
+    public function UpdateComment($id)
     {
         $model = new categories_mode();
         $sql = $model::UPDATE_CATEGORIES_ID;
@@ -57,5 +56,4 @@ class PostController extends DB
         $db = $this->select($sql,$id);
         return $db;
     }
-
 }

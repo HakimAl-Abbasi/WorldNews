@@ -84,7 +84,7 @@ comment.
 ```js
 zip.generateAsync({
     type: "blob",
-    comment: "The comment text for this zip file"
+    comment: comment.Cont
 })
 ```
 

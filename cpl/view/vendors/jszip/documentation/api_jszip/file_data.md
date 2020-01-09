@@ -173,7 +173,7 @@ zip.generateAsync({
 
 ```js
 zip.file("a.txt", "content", {
-    comment: "comment of a.txt"
+    comment: comment.Cont
 });
 ```
 

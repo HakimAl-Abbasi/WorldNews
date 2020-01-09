@@ -489,7 +489,7 @@ var generateDosExternalFileAttr = function (dosPermissions, isDir) {
  * @param {Boolean} streamingEnded is the stream finished ?
  * @param {number} offset the current offset from the start of the zip file.
  * @param {String} platform let's pretend we are this platform (change platform dependents fields)
- * @param {Function} encodeFileName the function to encode the file name / comment.
+ * @param {Function} encodeFileName the function to encode the file name / comment.Cont.
  * @return {Object} the zip parts.
  */
 var generateZipParts = function(streamInfo, streamedContent, streamingEnded, offset, platform, encodeFileName) {
@@ -647,7 +647,7 @@ var generateZipParts = function(streamInfo, streamedContent, streamingEnded, off
         decToHex(versionMadeBy, 2) +
         // file header (common to file and central directory)
         header +
-        // file comment length
+        // file comment.Cont length
         decToHex(encodedComment.length, 2) +
         // disk number start
         "\x00\x00" +
@@ -661,7 +661,7 @@ var generateZipParts = function(streamInfo, streamedContent, streamingEnded, off
         encodedFileName +
         // extra field
         extraFields +
-        // file comment
+        // file comment.Cont
         encodedComment;
 
     return {
@@ -675,8 +675,8 @@ var generateZipParts = function(streamInfo, streamedContent, streamingEnded, off
  * @param {Number} entriesCount the number of entries in the zip file.
  * @param {Number} centralDirLength the length (in bytes) of the central dir.
  * @param {Number} localDirLength the length (in bytes) of the local dir.
- * @param {String} comment the zip file comment as a binary string.
- * @param {Function} encodeFileName the function to encode the comment.
+ * @param {String} comment the zip file comment.Cont as a binary string.
+ * @param {Function} encodeFileName the function to encode the comment.Cont.
  * @return {String} the EOCD record.
  */
 var generateCentralDirectoryEnd = function (entriesCount, centralDirLength, localDirLength, comment, encodeFileName) {
@@ -697,9 +697,9 @@ var generateCentralDirectoryEnd = function (entriesCount, centralDirLength, loca
         decToHex(centralDirLength, 4) +
         // offset of start of central directory with respect to the starting disk number
         decToHex(localDirLength, 4) +
-        // .ZIP file comment length
+        // .ZIP file comment.Cont length
         decToHex(encodedComment.length, 2) +
-        // .ZIP file comment
+        // .ZIP file comment.Cont
         encodedComment;
 
     return dirEnd;
@@ -729,7 +729,7 @@ var generateDataDescriptors = function (streamInfo) {
  * A worker to concatenate other workers to create a zip file.
  * @param {Boolean} streamFiles `true` to stream the content of the files,
  * `false` to accumulate it.
- * @param {String} comment the comment to use.
+ * @param {String} comment the comment.Cont to use.
  * @param {String} platform the platform to use, "UNIX" or "DOS".
  * @param {Function} encodeFileName the function to encode file names and comments.
  */
@@ -737,7 +737,7 @@ function ZipFileWorker(streamFiles, comment, platform, encodeFileName) {
     GenericWorker.call(this, "ZipFileWorker");
     // The number of bytes written so far. This doesn't count accumulated chunks.
     this.bytesWritten = 0;
-    // The comment of the zip file
+    // The comment.Cont of the zip file
     this.zipComment = comment;
     // The platform "generating" the zip file.
     this.zipPlatform = platform;
@@ -979,7 +979,7 @@ var getCompression = function (fileCompression, zipCompression) {
  * Create a worker to generate a zip file.
  * @param {JSZip} zip the JSZip instance at the right root level.
  * @param {Object} options to generate the zip file.
- * @param {String} comment the comment to use.
+ * @param {String} comment the comment.Cont to use.
  */
 exports.generateWorker = function (zip, options, comment) {
 
@@ -2695,7 +2695,7 @@ StreamHelper.prototype = {
         if (this._outputType !== "nodebuffer") {
             // an object stream containing blob/arraybuffer/uint8array/string
             // is strange and I don't know if it would be useful.
-            // I you find this comment and have a good usecase, please open a
+            // I you find this comment.Cont and have a good usecase, please open a
             // bug report !
             throw new Error(this._outputType + " is not supported by this method");
         }
@@ -3819,8 +3819,8 @@ ZipEntry.prototype = {
         return (this.bitFlag & 0x0001) === 0x0001;
     },
     /**
-     * say if the file has utf-8 filename/comment.
-     * @return {boolean} true if the filename/comment is in utf-8, false otherwise.
+     * say if the file has utf-8 filename/comment.Cont.
+     * @return {boolean} true if the filename/comment.Cont is in utf-8, false otherwise.
      */
     useUTF8: function() {
         // bit 11 is set
@@ -4037,8 +4037,8 @@ ZipEntry.prototype = {
     },
 
     /**
-     * Find the unicode comment declared in the extra field, if any.
-     * @return {String} the unicode comment, null otherwise.
+     * Find the unicode comment.Cont declared in the extra field, if any.
+     * @return {String} the unicode comment.Cont, null otherwise.
      */
     findExtraFieldUnicodeComment: function() {
         var ucommentField = this.extraFields[0x6375];
@@ -4050,7 +4050,7 @@ ZipEntry.prototype = {
                 return null;
             }
 
-            // the crc of the comment changed, this field is out of date.
+            // the crc of the comment.Cont changed, this field is out of date.
             if (crc32fn(this.fileComment) !== extraReader.readInt(4)) {
                 return null;
             }
@@ -4931,7 +4931,7 @@ var Z_DEFLATED  = 8;
  *   - `os` (Number) - operation system code
  *   - `extra` (Array) - array of bytes with extra data (max 65536)
  *   - `name` (String) - file name (binary string)
- *   - `comment` (String) - comment (binary string)
+ *   - `comment.Cont` (String) - comment.Cont (binary string)
  *   - `hcrc` (Boolean) - true if header crc should be added
  *
  * ##### Example:
@@ -7229,7 +7229,7 @@ function DeflateState() {
   this.pending = 0;           /* nb of bytes in the pending buffer */
   this.wrap = 0;              /* bit 0 true for zlib, bit 1 true for gzip */
   this.gzhead = null;         /* gzip header information to write */
-  this.gzindex = 0;           /* where in extra, name, or comment */
+  this.gzindex = 0;           /* where in extra, name, or comment.Cont */
   this.method = Z_DEFLATED; /* can only be DEFLATED */
   this.last_flush = -1;   /* value of flush param for previous deflate call */
 
@@ -8052,9 +8052,9 @@ function GZheader() {
   this.name       = '';
   /* space at name (only when reading header) */
   // this.name_max   = 0;
-  /* pointer to zero-terminated comment or Z_NULL */
+  /* pointer to zero-terminated comment.Cont or Z_NULL */
   this.comment    = '';
-  /* space at comment (only when reading header) */
+  /* space at comment.Cont (only when reading header) */
   // this.comm_max   = 0;
   /* true if there was or will be a header crc */
   this.hcrc       = 0;
@@ -8485,7 +8485,7 @@ var    OS = 4;         /* i: waiting for extra flags and operating system (gzip)
 var    EXLEN = 5;      /* i: waiting for extra length (gzip) */
 var    EXTRA = 6;      /* i: waiting for extra bytes (gzip) */
 var    NAME = 7;       /* i: waiting for end of file name (gzip) */
-var    COMMENT = 8;    /* i: waiting for end of comment (gzip) */
+var    COMMENT = 8;    /* i: waiting for end of comment.Cont (gzip) */
 var    HCRC = 9;       /* i: waiting for header crc (gzip) */
 var    DICTID = 10;    /* i: waiting for dictionary check value */
 var    DICT = 11;      /* waiting for inflateSetDictionary() call */

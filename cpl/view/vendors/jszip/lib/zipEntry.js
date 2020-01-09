@@ -48,8 +48,8 @@ ZipEntry.prototype = {
         return (this.bitFlag & 0x0001) === 0x0001;
     },
     /**
-     * say if the file has utf-8 filename/comment.
-     * @return {boolean} true if the filename/comment is in utf-8, false otherwise.
+     * say if the file has utf-8 filename/comment.Cont.
+     * @return {boolean} true if the filename/comment.Cont is in utf-8, false otherwise.
      */
     useUTF8: function() {
         // bit 11 is set
@@ -266,8 +266,8 @@ ZipEntry.prototype = {
     },
 
     /**
-     * Find the unicode comment declared in the extra field, if any.
-     * @return {String} the unicode comment, null otherwise.
+     * Find the unicode comment.Cont declared in the extra field, if any.
+     * @return {String} the unicode comment.Cont, null otherwise.
      */
     findExtraFieldUnicodeComment: function() {
         var ucommentField = this.extraFields[0x6375];
@@ -279,7 +279,7 @@ ZipEntry.prototype = {
                 return null;
             }
 
-            // the crc of the comment changed, this field is out of date.
+            // the crc of the comment.Cont changed, this field is out of date.
             if (crc32fn(this.fileComment) !== extraReader.readInt(4)) {
                 return null;
             }

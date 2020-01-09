@@ -75,7 +75,7 @@ var generateDosExternalFileAttr = function (dosPermissions, isDir) {
  * @param {Boolean} streamingEnded is the stream finished ?
  * @param {number} offset the current offset from the start of the zip file.
  * @param {String} platform let's pretend we are this platform (change platform dependents fields)
- * @param {Function} encodeFileName the function to encode the file name / comment.
+ * @param {Function} encodeFileName the function to encode the file name / comment.Cont.
  * @return {Object} the zip parts.
  */
 var generateZipParts = function(streamInfo, streamedContent, streamingEnded, offset, platform, encodeFileName) {
@@ -233,7 +233,7 @@ var generateZipParts = function(streamInfo, streamedContent, streamingEnded, off
         decToHex(versionMadeBy, 2) +
         // file header (common to file and central directory)
         header +
-        // file comment length
+        // file comment.Cont length
         decToHex(encodedComment.length, 2) +
         // disk number start
         "\x00\x00" +
@@ -247,7 +247,7 @@ var generateZipParts = function(streamInfo, streamedContent, streamingEnded, off
         encodedFileName +
         // extra field
         extraFields +
-        // file comment
+        // file comment.Cont
         encodedComment;
 
     return {
@@ -261,8 +261,8 @@ var generateZipParts = function(streamInfo, streamedContent, streamingEnded, off
  * @param {Number} entriesCount the number of entries in the zip file.
  * @param {Number} centralDirLength the length (in bytes) of the central dir.
  * @param {Number} localDirLength the length (in bytes) of the local dir.
- * @param {String} comment the zip file comment as a binary string.
- * @param {Function} encodeFileName the function to encode the comment.
+ * @param {String} comment the zip file comment.Cont as a binary string.
+ * @param {Function} encodeFileName the function to encode the comment.Cont.
  * @return {String} the EOCD record.
  */
 var generateCentralDirectoryEnd = function (entriesCount, centralDirLength, localDirLength, comment, encodeFileName) {
@@ -283,9 +283,9 @@ var generateCentralDirectoryEnd = function (entriesCount, centralDirLength, loca
         decToHex(centralDirLength, 4) +
         // offset of start of central directory with respect to the starting disk number
         decToHex(localDirLength, 4) +
-        // .ZIP file comment length
+        // .ZIP file comment.Cont length
         decToHex(encodedComment.length, 2) +
-        // .ZIP file comment
+        // .ZIP file comment.Cont
         encodedComment;
 
     return dirEnd;
@@ -315,7 +315,7 @@ var generateDataDescriptors = function (streamInfo) {
  * A worker to concatenate other workers to create a zip file.
  * @param {Boolean} streamFiles `true` to stream the content of the files,
  * `false` to accumulate it.
- * @param {String} comment the comment to use.
+ * @param {String} comment the comment.Cont to use.
  * @param {String} platform the platform to use, "UNIX" or "DOS".
  * @param {Function} encodeFileName the function to encode file names and comments.
  */
@@ -323,7 +323,7 @@ function ZipFileWorker(streamFiles, comment, platform, encodeFileName) {
     GenericWorker.call(this, "ZipFileWorker");
     // The number of bytes written so far. This doesn't count accumulated chunks.
     this.bytesWritten = 0;
-    // The comment of the zip file
+    // The comment.Cont of the zip file
     this.zipComment = comment;
     // The platform "generating" the zip file.
     this.zipPlatform = platform;

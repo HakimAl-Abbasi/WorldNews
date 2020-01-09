@@ -27,6 +27,16 @@ elseif ($do =='Edit') {
 
     <?php
 }
+elseif ($do =='Update') {
+    ?>
+
+    <?php
+}
+elseif ($do =='Delete') {
+    $user_id = isset($_GET['User_ID']) && is_numeric($_GET['User_ID']) ? intval($_GET['User_ID']) : 0;
+
+
+}
 ?>
 
 
@@ -60,4 +70,4 @@ elseif ($do =='Edit') {
 
 
 
-include 'includes/footer.php'; ?>
+<?php include'includes/footer.php';?>

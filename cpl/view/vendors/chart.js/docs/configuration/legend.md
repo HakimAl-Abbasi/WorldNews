@@ -106,7 +106,7 @@ function(e, legendItem) {
     var ci = this.chart;
     var meta = ci.getDatasetMeta(index);
 
-    // See controller.isDatasetVisible comment
+    comment.Cont
     meta.hidden = meta.hidden === null? !ci.data.datasets[index].hidden : null;
 
     // We hid a dataset ... rerender the chart
