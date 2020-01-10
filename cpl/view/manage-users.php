@@ -34,7 +34,7 @@ if($do == 'Manage'){?>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped  table-bordered">
-                                <a href="manage-users.php?do=addNew" class="btn btn-info fa fa-edit float-right">Add New User</a>
+                                <a href="manage-users.php?do=addNew" class="btn btn-info fa fa-plus-square float-right"> Add New User</a>
 
                                 <thead>
                                 <tr>
@@ -107,9 +107,9 @@ if($do == 'Manage'){?>
                                         <td align="center">
                                             <table>
                                                 <tr>
-                                                    <td> <a href="manage-users.php?do=Edit&userid=<?php echo $User_id?>" class="btn btn-info fa fa-edit">Edit</a></td>
-                                                    <td> <a href="#" class="btn btn-danger fa fa-trash-o"> Delete</a></td>
-                                                    <td> <a href="#"  class="btn btn-success fa fa-adn"> Active</a></td>
+                                                    <td> <a href="manage-users.php?do=Edit&userid=<?php echo $User_id?>" class="btn btn-info fa fa-edit"></a></td>
+                                                    <td> <a href="manage-users.php?do=delete&userid=<?php echo $User_id?>" class="btn btn-danger fa fa-trash-o"></a></td>
+                                                    <td> <a href="#"  class="btn btn-success fa fa-adn"></a></td>
 
                                                 </tr>
                                             </table>
@@ -365,13 +365,18 @@ elseif ($do == 'Update')
 
 
     ];
-    $update = new  User();
+    $update = new User();
     $update->UpdateUser( $info);
 }
 
-elseif ($do == 'Delete')
+elseif ($do == 'delete')
 {
+    $UserId = isset($_GET['userid']) && is_numeric($_GET['userid']) ? intval($_GET['userid']) : 0;
 
+
+    $del = new User();
+
+    $del->deleteUser($UserId);
 }
 ?>
 

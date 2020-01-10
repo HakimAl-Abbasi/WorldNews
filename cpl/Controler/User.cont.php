@@ -27,14 +27,7 @@ class User extends DB
     }
 
 
-    public function getAllCategoryId($id)
-    {
-        $model = new categories_mode();
-        $sql = $model::GET_ALL_CATEGORIES_ID;
-        $info = array('cat_id'=>$id);
-        $db = $this->select($sql,$info);
-        return $db;
-    }
+
 
 
 
@@ -52,9 +45,9 @@ class User extends DB
 
     public  function deleteUser($id)
     {
-        $model = new categories_mode();
-        $sql = $model::DELETE_USER_DATA;
-        $info = array('cat_id'=>$id);
+        $model = new User_Model();
+        $sql = $model::DELETE_USERS_DATA;
+        $info = array('User_ID'=>$id);
         $db =$this->delete($sql,$info);
         return $db;
     }
@@ -63,7 +56,7 @@ class User extends DB
 
     public function UpdateUser($id)
     {
-        $model = new categories_mode();
+        $model = new User_Model();
         $sql = $model::UPDATE_USERS_ID;
         $info = array('User_ID'=>$id);
         $db = $this->select($sql,$info);
