@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/includes/temp/login-header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/temp/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/temp/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/temp/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/temp/navbar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/layout/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ini.php" beforeDir="false" afterPath="$PROJECT_DIR$/ini.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layout/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/layout/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/layout/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/js/min.js" beforeDir="false" afterPath="$PROJECT_DIR$/layout/js/min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms/include/temp/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ms/include/temp/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ms/include/temp/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ms/include/temp/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wn/include/temp/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/wn/include/temp/navbar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +83,7 @@
       <workItem from="1578291144063" duration="16371000" />
       <workItem from="1578417330927" duration="8010000" />
       <workItem from="1578464432511" duration="26741000" />
-      <workItem from="1578543527875" duration="31231000" />
+      <workItem from="1578543527875" duration="36887000" />
     </task>
     <servers />
   </component>

@@ -39,7 +39,7 @@ include 'cpl/Model/categoreis.mod.php';
 
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.php?id=<?php echo $cat_id;?>"><?php echo $MainName;?></a>
+                                    <a class="nav-link" href=""index.php?id=<?php echo $cat_id;?>><?php echo $MainName;?></a>
                                 </li>
                                 <?php
                             }

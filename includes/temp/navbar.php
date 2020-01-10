@@ -4,7 +4,8 @@ include 'cpl/Controler/categories.cont.php';
 include 'cpl/Model/categoreis.mod.php';
 
 $cat = new categories();
-foreach ($cat->getAllCategory() as $category) {
+
+
     ?>
 
 
@@ -40,9 +41,18 @@ foreach ($cat->getAllCategory() as $category) {
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
+                <?php
+                foreach ($cat->getAllCategory() as $category) {
+                    $CatName = $category['Cat_name'];
+                    $CatId = $category['cat_id'];
+                    ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php?id=<?php echo $CatId;?>"><?php echo $CatName ?></a>
+                    </li>
+                    <?php
+                }
+                 ?>
+
                 <!--
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,7 +74,7 @@ foreach ($cat->getAllCategory() as $category) {
                 <div class="move_login">
                     <li class="nav-item">
                         <a class="nav-link btn btn-danger Login" href="#" data-toggle="modal"
-                           data-target="#Login">Login</a>
+                           data-target="#Login">login</a>
                     </li>
                 </div>
             </ul>
@@ -72,9 +82,6 @@ foreach ($cat->getAllCategory() as $category) {
         </div>
     </nav>
 
-    <?php
-}
-?>
 
 
 
