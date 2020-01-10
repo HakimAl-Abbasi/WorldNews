@@ -1,7 +1,9 @@
 <?php
 include "cpl/classes/DB.class.php";
-include'cpl/Controler/categories.cont.php';
+include 'cpl/Controler/categories.cont.php';
+include 'cpl/Controler/categories.cont.php';
 include 'cpl/Model/categoreis.mod.php';
+
 
 ?>
 
@@ -32,17 +34,18 @@ include 'cpl/Model/categoreis.mod.php';
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <?php
-                                $category = new categories();
+                                <?php/*
+                               $category = new categories();
                                 foreach ($category->getAllMainNamesCategories() as $categories) {
 
                                     $MainName = $categories['Cat_name'];
-
+                                    $cat_id = $categories['cat_id'];
+*/
                                     ?>
 
-                                    <li><a href="#"><?php echo $MainName;?></a></li>
+                                    <li><a href="index.php?id=<?php //echo $cat_id;?>"><?php //echo $MainName;?></a></li>
                                     <?php
-                                }
+                                //}
                                 ?>
                                 <!--
                                 <li><a href="#">Local News</a></li>
@@ -88,11 +91,12 @@ include 'cpl/Model/categoreis.mod.php';
 
 
 <!-- ##### Breaking News Area Start ##### -->
+
 <section class="breaking-news-area clearfix">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <!-- Breaking News Widget -->
+
                 <div class="breaking-news-ticker d-flex flex-wrap align-items-center">
                     <div class="title">
                         <h6>Trending</h6>

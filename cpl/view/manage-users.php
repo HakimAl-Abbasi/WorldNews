@@ -372,11 +372,17 @@ elseif ($do == 'Update')
 elseif ($do == 'delete')
 {
     $UserId = isset($_GET['userid']) && is_numeric($_GET['userid']) ? intval($_GET['userid']) : 0;
-
+    $in_data =' <div class="alert alert-primary" role="alert">data deleted</div>';
 
     $del = new User();
 
     $del->deleteUser($UserId);
+    echo $in_data;
+
+}
+else{
+    $ino_data =' <div class="alert alert-danger" role="alert">not data deleted</div>';
+    echo  $ino_data;
 }
 ?>
 

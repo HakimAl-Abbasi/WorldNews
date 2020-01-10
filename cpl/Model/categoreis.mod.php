@@ -5,8 +5,8 @@ class categories_mode {
     const GET_ALL_CATEGORIES= 'SELECT *  FROM categories';
     const GET_ALL_CATEGORIES_ID= 'SELECT *  FROM categories WHERE cat_id = cat_id';
 
-    const GET_ALL_CATEGORIES_MAIN_PARENT ='SELECT Ca_name ,cat_id FROM categories WHERE parent =0 AND  cat_id = cat_id';
-    const GET_ALL_CATEGORIES_SUB_PARENT ='SELECT Ca_name FROM categories WHERE parent =1';
+    const GET_ALL_CATEGORIES_MAIN_PARENT ='SELECT Cat_name ,cat_id FROM categories WHERE parent =0 AND  cat_id = cat_id';
+    const GET_ALL_CATEGORIES_SUB_PARENT ='SELECT Cat_name FROM categories WHERE parent =1';
 
 
 
@@ -47,12 +47,7 @@ const UPDATE_CATEGORIES_ID ='UPDATE categories SET cat_id =:cat_id, updated_by =
 
 
 
-    public $Ca_name;
-    public $create_by;
-    public $create_date;
-    public $update_date;
-    public $create_status;
-    public $parent;
+
 
 }
 

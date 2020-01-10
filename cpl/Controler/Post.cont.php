@@ -14,11 +14,20 @@ class post extends DB
         return $db;
     }
 
+    public function GetAllPost()
+    {
+        $model = new Post_Model();
+        $sql = $model::GET_All_POSTS_PID;
+
+        $db = $this->select($sql);
+        return $db;
+    }
+
     public function getPostId($id)
     {
-        $model = new categories_mode();
-        $sql = $model::GET_ALL_CATEGORIES_ID;
-        $info = array('cat_id'=>$id);
+        $model = new Post_Model();
+        $sql = $model::GET_All_POSTS_ID;
+        $info = array('Post_ID'=>$id);
         $db = $this->select($sql,$info);
         return $db;
     }
@@ -28,7 +37,7 @@ class post extends DB
     public function InsertPost($info)
     {
 
-        $model = new categories_mode();
+        $model = new Post_Model();
 
         $sql = $model::INSERT_ALL_CATEGORIES;
 
@@ -39,7 +48,7 @@ class post extends DB
 
     public  function deletePost($id)
     {
-        $model = new categories_mode();
+        $model = new Post_Model();
         $sql = $model::DELETE_CATEGORIES_DATA;
         $info = array('cat_id'=>$id);
         $db =$this->delete($sql,$info);
@@ -50,7 +59,7 @@ class post extends DB
 
     public function UpdatePost($id)
     {
-        $model = new categories_mode();
+        $model = new Post_Model();
         $sql = $model::UPDATE_CATEGORIES_ID;
 
         $db = $this->select($sql,$id);

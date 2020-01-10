@@ -1,7 +1,7 @@
 <?php
 
 include "cpl/classes/DB.class.php";
-include'cpl/Controler/categories.cont.php';
+include 'cpl/Controler/categories.cont.php';
 include 'cpl/Model/categoreis.mod.php';
 
 

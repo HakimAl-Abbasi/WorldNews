@@ -1,7 +1,7 @@
 <!-- Preloader Start -->
 <?php
 include "cpl/classes/DB.class.php";
-include'cpl/Controler/categories.cont.php';
+include 'cpl/Controler/categories.cont.php';
 include 'cpl/Model/categoreis.mod.php';
 ?>
 <div id="preloader">
@@ -31,7 +31,7 @@ include 'cpl/Model/categoreis.mod.php';
                             $category = new categories();
 
                             foreach ($category->getAllMainNamesCategories() as $catName) {
-                                $MainName = $catName['Ca_name'];
+                                $MainName = $catName['Cat_name'];
                                 $cat_id = $catName['cat_id'];
 
 

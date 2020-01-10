@@ -1,7 +1,9 @@
 <?php
-include 'includes/header-nav.php';;
+include 'includes/header-nav.php';
+//include '../includes/loader.inc.php';
+//include '../includes/loderCon.inc.php';
 include "../classes/DB.class.php";
-include'../Controler/Post.Cont.php';
+include '../Controler/Post.cont.php';
 
 
 

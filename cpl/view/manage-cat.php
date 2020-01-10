@@ -1,7 +1,7 @@
 <?php
 include 'includes/header-nav.php';
 include "../classes/DB.class.php";
-include'../Controler/categories.cont.php';
+include '../Controler/categories.cont.php';
 
 $do =isset($_GET['do'])?$_GET['do']:'Manage';
 
@@ -351,13 +351,21 @@ elseif(isset($_GET['do']) == 'Update') {
 
 }
 elseif(isset($_GET['do']) == 'delete') {
+
     $cat_id = isset($_GET['catid']) && is_numeric($_GET['catid']) ? intval($_GET['catid']) : 0;
 
+    $in_data =' <div class="alert alert-primary" role="alert">data deleted</div>';
 
     $del = new categories();
 
     $del->deleteCategory($cat_id);
+    echo $in_data;
 
+
+} else
+{
+    $ino_data =' <div class="alert alert-danger" role="alert">not data deleted</div>';
+    echo  $ino_data;
 }
 ?>
 

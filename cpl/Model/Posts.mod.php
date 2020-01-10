@@ -6,6 +6,10 @@ class Post_Model
     const  GET_ALL_POSTS = "SELECT * FROM posts";
     const  GET_ACTIVE_POSTS = "SELECT * FROM posts WHERE Post_Status =1";
     const  GET_NOT_ACTIVE_POSTS = "SELECT * FROM posts WHERE Post_Status =-1";
+    const  GET_All_POSTS_ID = "SELECT * FROM posts WHERE cat_id =cat_id";
+    const  GET_All_POSTS_PID = "SELECT Post_Title, Post_ID FROM posts WHERE cat_id =cat_id";
+    //const GET_ALL_CATEGORIES_MAIN_PARENT ='SELECT Cat_name ,cat_id FROM categories WHERE parent =0 AND  cat_id = cat_id';
+
 
     const  CHECK_POSTS = "SELECT * FROM posts WHERE Post_Title =:Post_Title";
     const  GET_PARENT_POSTS = "SELECT *  FROM posts  WHERE parent = 0";

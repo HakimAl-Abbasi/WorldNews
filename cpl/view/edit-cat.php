@@ -1,7 +1,7 @@
 <?php
 include 'includes/header-nav.php';
 include "../classes/DB.class.php";
-include'../Controler/categories.cont.php';
+include '../Controler/categories.cont.php';
 ?>
 
 
