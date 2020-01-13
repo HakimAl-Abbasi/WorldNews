@@ -4,8 +4,9 @@ include 'includes/header-nav.php';
 //include '../includes/loderCon.inc.php';
 include "../classes/DB.class.php";
 include '../Controler/Post.cont.php';
+//include 'cpl/Controler/categories.cont.php';
 
-
+$posts = new post();
 
 $do =isset($_GET['do'])?$_GET['do']:'Manage';
 
@@ -35,7 +36,7 @@ if($do == 'Manage') {
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
-                                <a href="manage-cat.php?do=addNew" class="btn btn-info fa fa-edit float-right">Add New
+                                <a href="manage-posts.php?do=addNew" class="btn btn-info fa fa-edit float-right">Add New
                                     User</a>
 
                                 <thead>
@@ -43,9 +44,9 @@ if($do == 'Manage') {
                                     <th>#</th>
 
                                     <th>&ensp;&ensp; المنشور</th>
-                                    <th>المقدمة</th>
 
-                                    <th>المحتوى</th>
+
+
                                     <th>صورة المحتوى</th>
                                     <th>الكاتب</th>
                                     <th>تاريخ الانشاء</th>
@@ -59,7 +60,7 @@ if($do == 'Manage') {
                                 <tbody>
                                 <?php
 
-                                $posts = new post();
+
                                 foreach ($posts->getAllPosts() as $Posts) {
                                     // variables
                                     $PostID = $Posts['Post_ID'];
@@ -67,7 +68,7 @@ if($do == 'Manage') {
                                     $PostIntro = $Posts['Post_Intro'];
                                     $PostContent = $Posts['Post_Content'];
                                     $PostImage = $Posts['Post_img'];
-                                    $CreateBy = $Posts['Create_by'];
+                                    $CreateBy = $Posts['Create_by'] = $_SESSION['username'];
                                     $CreateDate = $Posts['Create_Date'];
                                     $UpdatesDate = $Posts['Updates_date'];
                                     $PublishDate = $Posts['Publish_Date'];
@@ -104,37 +105,31 @@ if($do == 'Manage') {
                                     <tr>
                                         <td align="center"><?php echo $PostID; ?></td>
                                         <td align="center"><?php echo $PostTitle; ?></td>
-                                        <td align="center"><?php echo $PostIntro; ?></td>
-                                        <td align="center"><?php echo $PostContent; ?></td>
-                                        <td align="center"><?php echo $PostImage; ?></td>
+                                        <!--<td align="center"><?php #echo $PostIntro; ?></td>
+                                        <td align="center"><?php #echo $PostContent; ?></td>-->
+                                        <td align="center"><img src="../Data/upload/uploads/<?php echo $PostImage;?>"></td>
                                         <td align="center"><?php echo $CreateBy; ?></td>
                                         <td align="center"><?php echo $CreateDate; ?></td>
                                         <td align="center"><?php echo $UpdatesDate; ?></td>
                                         <td align="center"><?php echo $PublishDate; ?></td>
                                         <td align="center"><?php echo $CatID; ?></td>
                                         <td align="center"><?php echo $PostStatus; ?></td>
-
-                                        <?php
-
-
-                                        ?>
                                         <td>
                                             <table>
                                                 <tr>
-                                                    <td><a href="manage-posts.php?do=Edit&postid=<?php echo $PostID ?>"
-                                                           name="Edit"
-                                                           class="btn btn-info  fa fa-edit"> Edit</a></td>
                                                     <td>
-                                                        <a href="manage-posts.php?do=delete&postid=<?php echo $PostID ?>"
-                                                           name=" delete" class="btn btn-danger fa fa-trash-o">
-                                                            Delete</a></td>
+                                                        <a href="manage-posts.php?do=Edit&postid=<?php echo $PostID ?>" name="Edit" class="btn btn-info  fa fa-edit"></a>
+                                                    </td>
                                                     <td>
-                                                        <a href="manage-posts.php?do=Update&postid=<?php echo $PostID ?>"
-                                                           class="btn btn-success fa fa-adn">
-                                                            Active</a></td>
+
+                                                         <a href="manage-posts.php?do=delete&postid=<?php echo $PostID ?>" name=" delete" class="btn btn-danger fa fa-trash-o">
+                                                        </a>
+                                                    </td>
                                                 </tr>
                                             </table>
                                         </td>
+
+
 
 
                                     </tr>
@@ -166,52 +161,128 @@ if($do == 'Manage') {
 
     elseif ($do =='addNew') {
 
-    $in_data =' <div class="alert alert-primary" role="alert">data inserted</div>';
-    $ino_data =' <div class="alert alert-danger" role="alert">not insert</div>';
-    /*
-    $info = [
-         $PostID =$_POST[''];
-         $PostTitle=$_POST[''];
-         $PostIntro =$_POST[''];
-         $PostContent ==$_POST[''];
-         $PostImage,
-         $CreateBy,
-         $CreateDate,
-        $UpdatesDate,
-        $PublishDate,
-        $CatID,
-        $PostStatus
+        $cat = new post();
+        $catId = isset($_GET['postid']) && is_numeric($_GET['postid']) ? intval($_GET['postid']) : 0;
 
 
 
-    ];*/
+        $in_data =' <div class="alert alert-primary" role="alert">data inserted</div>';
+        $ino_data =' <div class="alert alert-danger" role="alert">not insert</div>';
 
-    if(isset($_POST['dd'])){
-        $info = [
-            'Post_ID'           =>   $PostID,
-            'Post_Title'        =>   $PostTitle,
-            'Post_Intro'        =>    $PostIntro,
-            'Post_Content'      =>   $PostContent,
-            'Post_img'          =>   $PostImage,
-            'Create_by'         =>   $CreateBy,
-            'Create_Date'       =>   $CreateDate,
-            'Updates_date'      =>    $UpdatesDate,
-            'Publish_Date'      =>   $PublishDate,
-            'cat_id'            =>   $CatID,
-            'Post_Status'       =>   $PostStatus
+
+        if(isset($_POST['dd'])){
+
+
+            $PName =rand(1000,10000).$_FILES['PImg']['name'];
+            $TName = $_FILES['PImg']['tmp_name'];
+            $upload_dir='Data/upload/uploads/';
 
 
 
-        ];
-    }
+            move_uploaded_file($TName,'$upload_dir');
+
+
+            $PTile          =$_POST['PTitle'];
+            $PIntro         =$_POST['PIntro'];
+            $PtContent      =$_POST['PContent'];
+            $PImg           = $TName.$upload_dir.$PName;
+            #$PAu           =$_POST['PAu'];
+            $CDate          =$_POST['CDate '];
+            $UDate          =$_POST['UDate'];
+            $PDate          =$_POST['PDate'];
+            $CId            =$_POST['CId'];
+            $PStatus        =$_POST['PStatus'];
+
+
+            $info = [
+
+                'Post_Title'            =>$PTile,
+                'Post_Intro'            =>$PIntro,
+                'Post_Content'          =>$PtContent,
+                'Post_img'              =>$PImg,
+                #'Create_by'             =>$PAu,
+                'Create_Date'           => $CDate,
+                'Updates_date'          => $UDate,
+                'Publish_Date'          =>$PDate,
+                'cat_id'                =>$CId,
+                'Post_Status'           =>$PStatus
+
+
+
+            ];
 
 
 
 
 
 
+            $cat->InsertPost($info);
 
+            echo $in_data;
+        }
+
+        else {
+            echo $ino_data;
+        }
     ?>
+
+        <div class="container">
+            <div>
+           <!-- <a href="manage-posts.php" class="btn btn-outline-info fa fa-back">Back</a>-->
+        </div>
+            <form action="../Data/upload/file_upload.php" method="post" enctype="multipart/form-data" class="">
+                <div class="form-group">
+                    <label for="PTitle"> Post Title</label>
+                    <input type="text" class="form-control"  id="PTitle " name ="PTitle" placeholder="Enter Post Title Name">
+
+                </div>
+                <div class="form-group">
+                    <label for="PIntros">Post Intro </label>
+
+                    <textarea type="text"   class="form-control" name="PIntro"></textarea>
+
+                </div>
+                <div class="form-group">
+                    <label for="PContent">Post Content </label>
+
+                    <textarea type="text" class="form-control" name="PContent"></textarea>
+
+                </div>
+
+                <div class="form-group">
+
+                    <input type="file" class="form-control"    name ="PImg"  Value="Upload Files">
+
+                </div>
+
+                <div class="form-group">
+                    <label for="CDate">Created Date</label>
+                    <input type="date" class="form-control" name="CDate" >
+                </div>
+                <div class="form-group">
+                    <label for="UDate">Updated  date </label>
+                    <input type="Date"  name="UDate" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="PDate">Posted date </label>
+                    <input type="Date"  name="PDate" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="CId">Category</label>
+                    <input type="number"  name="CId" class="form-control">
+                </div><div class="form-group">
+                    <label for="PStatus">Post Status </label>
+                    <input type="number" name="PStatus" class="form-control">
+                </div>
+
+
+
+
+
+                <input type="submit" name="dd" class="btn btn-primary" value="Insert">
+            </form>
+        </div>
 
     <?php
 }
@@ -230,6 +301,8 @@ elseif ($do =='Update') {
 elseif ($do =='Delete') {
     $user_id = isset($_GET['postid']) && is_numeric($_GET['postid']) ? intval($_GET['postid']) : 0;
 
+
+$posts->deletePost($user_id);
 
 }
 ?>

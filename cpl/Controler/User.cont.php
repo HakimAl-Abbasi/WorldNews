@@ -3,14 +3,15 @@
 @include ('../Model/User.mod.php');
 
 
-
 class User extends DB
 {
+
 
 
     public  function getAllUsers()
     {
         $model = new User_Model();
+
     $sql =$model::GET_ALL_USERS;
 
         $db =$this->select($sql);
@@ -62,5 +63,16 @@ class User extends DB
         $db = $this->select($sql,$info);
         return $db;
     }
+    public function loginUser($args)
+    {
+        $model = new User_Model();
 
+        $sql = $model::CHECK_LOGIN_USER;
+
+
+        $db = $this ->checkLogin($sql,$args);
+
+        return $db;
+
+    }
 }

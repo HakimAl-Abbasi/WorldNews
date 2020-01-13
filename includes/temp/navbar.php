@@ -29,8 +29,8 @@ $cat = new categories();
     </nav>-->
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <a class="navbar-brand" href="index.php">HmhNews</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.php">WORLD NEWS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@ $cat = new categories();
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">الرئيسية <span class="sr-only">(current)</span></a>
                 </li>
                 <?php
                 foreach ($cat->getAllCategory() as $category) {
@@ -73,7 +73,7 @@ $cat = new categories();
               </li>-->
                 <div class="move_login">
                     <li class="nav-item">
-                        <a class="nav-link btn btn-danger Login" href="#" data-toggle="modal"
+                        <a class="nav-link  Login" href="#" data-toggle="modal"
                            data-target="#Login">login</a>
                     </li>
                 </div>
@@ -100,7 +100,7 @@ $cat = new categories();
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="Login">Modal title</h5>
+        <h5 class="modal-title" id="Login">Login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -125,17 +125,21 @@ $cat = new categories();
                         <input type="Password" class="form-control" id="inlineFormInputGroup" name="pass" placeholder="Username">
                       </div>
 
-                    </div><br><br>
-                    <div class="col-auto">
-                      <button type="submit" class="btn btn-primary mb-2">Login</button>
                     </div>
+
                   </div>
                 </form>
        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      
+          <table>
+              <tr>
+                  &nbsp;&nbsp;&nbsp;
+                  &nbsp;<td><button type="submit" class="btn btn-primary mb-2">Login</button></td>
+                  &nbsp;&nbsp;&nbsp;<td> <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button></td>
+              </tr>
+          </table>
+
       </div>
     </div>
   </div>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -17,6 +20,9 @@
     <link rel="shortcut icon" href="favicon.ico">
 
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../vendors/animate.css/AdminLTE.min.css">
+    <link rel="stylesheet" href="../vendors/animate.css/skins/_all-skins.min.css">
+
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
@@ -40,14 +46,14 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="./">News Dashboard</a>
+            <a class="navbar-brand" href="./"><?php echo $_SESSION['username'];?></a>
             <a class="navbar-brand hidden" href="./"><img src="images/logo2.png" alt="Logo"></a>
         </div>
 
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active">
-                    <a href="index.php"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    <a href="index.php"> <i class="menu-icon fa fa-dashboard"></i>Dashboard News </a>
                 </li>
                 <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
                 <li class="menu-item-has-children dropdown">
@@ -220,7 +226,7 @@
 
                         <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 
-                        <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i> Logout</a>
                     </div>
                 </div>
 

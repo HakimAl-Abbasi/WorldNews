@@ -4,6 +4,7 @@ class DB
 {
     private $pdo = null;
     private $stmt = null;
+    public $count = null;
 
     function __construct()
     {
@@ -31,6 +32,29 @@ class DB
             $this->pdo = null;
         }
     }
+
+    function checkLogin($sql,$args=[])
+    {
+        $result = false;
+        try {
+
+            $this->stmt = $this->pdo->prepare($sql);
+            $this->stmt->execute($args);
+            $this->count=$this->stmt->rowCount();
+            if($this->count >0) {
+
+            }
+
+        } catch (Exception $ex) {
+            die($ex->getMessage());
+        }
+        $this->stmt = null;
+
+        return $result;
+    }
+
+
+
 
     function select($sql, $cond = null)
     {

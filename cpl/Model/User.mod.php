@@ -1,8 +1,10 @@
 <?php
 class User_Model
-{
+{   // select section
     const GET_ALL_USERS = 'SELECT *  FROM users';
     const GET_ALL_USER_ID ='SELECT * FROM users WHERE User_ID =:User_ID';
+    const CHECK_LOGIN_USER  ='SELECT Username ,Password FROM users WHERE Username =? AND Password =? AND User_GroupID =7';
+
 
 
 

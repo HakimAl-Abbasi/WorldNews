@@ -23,8 +23,8 @@ class categories_mode {
 
     //insert into categories
     const INSERT_ALL_CATEGORIES ='INSERT INTO categories
-                                    (Cat_name,updated_by,update_date,category_status,parent)
-                                    VALUES (:Cat_name,:updated_by,:update_date,:category_status,:parent)';
+                                    (Cat_name,update_date,category_status,parent)
+                                    VALUES (:Cat_name,:update_date,:category_status,:parent)';
 
 
 

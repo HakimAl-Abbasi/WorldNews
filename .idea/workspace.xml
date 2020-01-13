@@ -2,17 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d7aef5f-5e17-4394-9952-fafba012e044" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/includes/temp/login-header.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpl/Data/upload/file_upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpl/view/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/css/classy-nav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/images/bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/images/core-img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/images/core-img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/images/slider4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/js/active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/layout/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cpl/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/Controler/Post.cont.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Controler/Post.cont.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/Controler/User.cont.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Controler/User.cont.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/Model/Posts.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Model/Posts.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/Model/User.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Model/User.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/Model/categoreis.mod.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/Model/categoreis.mod.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/classes/DB.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/classes/DB.class.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/assets/css/my_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/assets/css/my_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/includes/header-nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/includes/header-nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/manage-cat.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-cat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/manage-posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cpl/view/manage-users.php" beforeDir="false" afterPath="$PROJECT_DIR$/cpl/view/manage-users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hmh-login.php" beforeDir="false" afterPath="$PROJECT_DIR$/hmh-login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/temp/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/temp/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/temp/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/temp/nav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/temp/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/temp/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/temp/scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/temp/scripts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ini.php" beforeDir="false" afterPath="$PROJECT_DIR$/ini.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/layout/css/bootstrap.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layout/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/layout/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ms/include/temp/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ms/include/temp/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ms/include/temp/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/ms/include/temp/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wn/include/temp/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/wn/include/temp/navbar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +67,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../oop" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
@@ -48,6 +76,23 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\worldnews\cpl\Data\upload" />
+      <recent name="C:\xampp\htdocs\worldnews\cpl" />
+      <recent name="C:\xampp\htdocs\worldnews\cpl\view\Data\upload\uploads" />
+      <recent name="C:\xampp\htdocs\worldnews\cpl\view\Data\upload" />
+      <recent name="C:\xampp\htdocs\worldnews\cpl\view\includes" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\worldnews\cpl" />
+      <recent name="C:\xampp\htdocs\worldnews" />
+      <recent name="C:\xampp\htdocs\worldnews\layout" />
+      <recent name="C:\xampp\htdocs\worldnews\layout\js" />
+      <recent name="C:\xampp\htdocs\worldnews\layout\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -83,7 +128,8 @@
       <workItem from="1578291144063" duration="16371000" />
       <workItem from="1578417330927" duration="8010000" />
       <workItem from="1578464432511" duration="26741000" />
-      <workItem from="1578543527875" duration="36887000" />
+      <workItem from="1578543527875" duration="64437000" />
+      <workItem from="1578754316030" duration="39404000" />
     </task>
     <servers />
   </component>

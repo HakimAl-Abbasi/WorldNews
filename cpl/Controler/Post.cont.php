@@ -37,9 +37,10 @@ class post extends DB
     public function InsertPost($info)
     {
 
+
         $model = new Post_Model();
 
-        $sql = $model::INSERT_ALL_CATEGORIES;
+        $sql = $model::INSERT_TO_POSTS_TABLE;
 
         $db = $this->insert($sql,$info);
         return$db;

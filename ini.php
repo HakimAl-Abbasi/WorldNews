@@ -15,9 +15,9 @@ $n ='navbar.php';
 $s ='scripts.php';
 $f ='footer.php';
 $lg ='login-header.php';
-//$c = 'cpl/includes/conf/conf.php';
+$c = 'cpl/conf/conf.php';
 #============================================
 #========= [connection database] ==============
-//@include($c);
+@include($c);
 #============================================
 

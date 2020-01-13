@@ -33,17 +33,15 @@ if($do == 'Manage'){?>
                             <strong class="card-title">Data Table</strong>
                         </div>
                         <div class="card-body">
-                            <table id="bootstrap-data-table-export" class="table table-striped  table-bordered">
+                            <table id="bootstrap-data-table-export" class="table table-striped">
                                 <a href="manage-users.php?do=addNew" class="btn btn-info fa fa-plus-square float-right"> Add New User</a>
 
-                                <thead>
+                                <thead class="bg-info  text-center">
                                 <tr>
-                                    <th>#</th>
+                                    <th>ID</th>
                                     <th align="center">Name</th>
                                     <th align="center">Email</th>
-                                    <th align="center">password</th>
                                     <th align="center">Full Name </th>
-                                    <th align="center">User Phone </th>
                                     <th align="center">Register Date</th>
                                     <th align="center">User GroupID</th>
                                     <th align="center">User Status</th>
@@ -79,13 +77,13 @@ if($do == 'Manage'){?>
 
                                     }
 
-                                    if($Group_Id = $users['User_GroupID'] == "7")
+                                    if($Group_Id = $users['User_GroupID'] >0)
                                     {
                                         $admin ='admin';
                                         $Group_Id = $users['User_GroupID'] = $admin;
 
                                     }
-                                    else if($Group_Id = $users['User_GroupID'] == "8")
+                                    else if($Group_Id = $users['User_GroupID'] =="0")
                                     {
                                         $u ='user';
                                         $Group_Id = $users['User_GroupID'] = $u;
@@ -98,9 +96,7 @@ if($do == 'Manage'){?>
                                         <td align="center"><?php echo $User_id;?></td>
                                         <td align="center"><?php echo $User_Name;?></td>
                                         <td align="center"><?php echo $User_Email;?></td>
-                                        <td align="center"><?php echo $User_pass;?></td>
                                         <td align="center"><?php echo $fullName;?></td>
-                                        <td align="center"><?php echo $User_Phone;?></td>
                                         <td align="center"><?php echo $Register_date;?></td>
                                         <td align="center"><?php echo $Group_Id;?></td>
                                         <td align="center"><?php echo $Status;?></td>
@@ -109,8 +105,6 @@ if($do == 'Manage'){?>
                                                 <tr>
                                                     <td> <a href="manage-users.php?do=Edit&userid=<?php echo $User_id?>" class="btn btn-info fa fa-edit"></a></td>
                                                     <td> <a href="manage-users.php?do=delete&userid=<?php echo $User_id?>" class="btn btn-danger fa fa-trash-o"></a></td>
-                                                    <td> <a href="#"  class="btn btn-success fa fa-adn"></a></td>
-
                                                 </tr>
                                             </table>
 
@@ -167,8 +161,8 @@ elseif ($do =='addNew') {
 
 
 
-
    }
+
     ?>
 <!-- start form  -->
 
@@ -268,11 +262,11 @@ elseif ($do =='Edit')
             $userGroup = $item['User_GroupID'];
             $userStatus = $item['User_Status'];
 
-            if ($userGroup = $item['User_GroupID'] == "7") {
+            if ($userGroup = $item['User_GroupID'] >0) {
                 $admin = 'admin';
                 $userGroup = $users['User_GroupID'] = $admin;
 
-            } else if ($userGroup = $item['User_GroupID'] == "8") {
+            } else if ($userGroup = $item['User_GroupID'] =="0") {
                 $u = 'user';
                 $userGroup = $item['User_GroupID'] = $u;
             }

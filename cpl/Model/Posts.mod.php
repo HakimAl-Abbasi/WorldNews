@@ -7,7 +7,7 @@ class Post_Model
     const  GET_ACTIVE_POSTS = "SELECT * FROM posts WHERE Post_Status =1";
     const  GET_NOT_ACTIVE_POSTS = "SELECT * FROM posts WHERE Post_Status =-1";
     const  GET_All_POSTS_ID = "SELECT * FROM posts WHERE cat_id =cat_id";
-    const  GET_All_POSTS_PID = "SELECT Post_Title, Post_ID FROM posts WHERE cat_id =cat_id";
+    const  GET_All_POSTS_PID = "SELECT Post_Title,Post_Intro,Post_img , Publish_Date FROM posts WHERE cat_id =cat_id";
     //const GET_ALL_CATEGORIES_MAIN_PARENT ='SELECT Cat_name ,cat_id FROM categories WHERE parent =0 AND  cat_id = cat_id';
 
 
@@ -25,52 +25,53 @@ class Post_Model
 
 
 
-    const  INSERT_TO_CATEGORIES_TABLE = "INSERT INTO posts
+    const  INSERT_TO_POSTS_TABLE = "INSERT INTO posts
                                             (
                                             Post_Title,
-                                            cat_description,
-                                            cat_status,
-                                            create_by,
-                                            create_date,
-                                            updates,
-                                            parent,
-                                            ordering,
-                                            allow_ads,
-                                            allow_comments
+                                            Post_Intro,
+                                            Post_Content,
+                                            Post_img,
+                                          
+                                            Create_Date,
+                                            Updates_date,
+                                            Publish_Date,
+                                            cat_id,
+                                            Post_Status
                                             ) 
                                          VALUES 
                                              (
                                              :Post_Title,
-                                             :cat_description,
-                                             :cat_status,
-                                             :create_by,
-                                             :create_date,
-                                             :updates,
-                                             :parent,
-                                             :ordering,
-                                             :allow_ads,
-                                             :allow_comments
+                                             :Post_Intro,
+                                             :Post_Content,
+                                             :Post_img,
+                                        
+                                             :Create_Date,
+                                             :Updates_date,
+                                             :Publish_Date,
+                                             :cat_id,
+                                             :Post_Status
                                              )";
 
-    const  UPDATE_CATEGORY="UPDATE posts
+    const  UPDATE_POSTS="UPDATE posts
                       SET
-                      Post_Title =:Post_Title,
-                      cat_description =:cat_description,
-                      cat_status =:cat_status,
-                      visibility=:visibility,
-                      updates =:updates,
-                      parent =:parent,
-                      ordering=:ordering,
-                      allow_ads=:allow_ads,
-                      allow_comments=:allow_comments
+                      Post_Title             =:Post_Title,
+                      Post_Intro             =:Post_Intro,
+                      Post_Content           =:Post_Content,
+                      Post_img               =:Post_img,
+                      Create_by              =:Create_by,
+                      Create_Date            =:Create_Date,
+                      Updates_date           =:Updates_date,
+                      cat_id                 =:cat_id,
+                      Publish_Date           =:Publish_Date,
+                      Post_Status            =:Post_Status
                       WHERE
                       Post_ID =:Post_ID";
 
 
 
-    const DELETE_CATEGORY ="DELETE FROM posts WHERE Post_ID	 =:Post_ID	";
+    const DELETE_POSTS ="DELETE FROM posts WHERE Post_ID	 =:Post_ID	";
 
-    const ACTIVATE_CATEGORY = "UPDATE posts SET cat_status = 1 WHERE Post_ID=:Post_ID	";
+    const ACTIVATE_POSTS = "UPDATE posts SET cat_status = 1 WHERE Post_ID=:Post_ID	";
 
 
 

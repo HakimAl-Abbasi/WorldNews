@@ -5,3 +5,37 @@
     margin-top:10%;
     padding-left:30%;
 }
+.categories
+{
+    padding:15px;
+    width:20px;
+}
+
+.categories .cat {
+    position:relative;
+
+}
+.categories .cat:hover .btns
+{
+right: 10px;
+}
+.categories .btns
+{
+    -webkit-transition:all .5s ease-out ;
+    -moz-transition:all .5s ease-out ;
+    transition:all .5s ease-out ;
+
+    position:absolute;
+    right:-120px ;
+
+}
+.categories .btns
+{
+    right: 10px;
+}
+.categories .btns a
+{
+    margin-left:50px;
+    margin:0;
+
+}

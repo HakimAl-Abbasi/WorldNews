@@ -14,7 +14,7 @@ if($do == 'Manage') {
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1> ادارة المنشورات</h1>
+                    <h1> ادارة الاقسام</h1>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ if($do == 'Manage') {
                                     // variables
                                     $cat_id = $categories['cat_id'];
                                     $cat_name = $categories['Cat_name'];
-                                    $updated_by = $categories['updated_by'];
+                                    $updated_by = $categories['updated_by']= $_SESSION['username'];
                                     $updated_date = $categories['update_date'];
                                     $Status = $categories['category_status'];
                                     $cStatus = $categories['parent'];
@@ -89,7 +89,7 @@ if($do == 'Manage') {
                                     ?>
                                     <tr>
                                         <td align="center"><?php echo $cat_id; ?></td>
-                                        <td align="center"><?php echo $cat_name; ?></td>
+                                        <td align="center" class="categories"><?php echo $cat_name; ?></td>
                                         <td align="center"><?php echo $updated_by; ?></td>
                                         <td align="center"><?php echo $updated_date; ?></td>
                                         <td align="center"><?php echo $cStatus; ?></td>
@@ -100,13 +100,16 @@ if($do == 'Manage') {
 
 
                                         ?>
-                                        <td>
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="manage-cat.php?do=Edit&catid=<?php echo $cat_id ?>" name="Edit"
-                                               class="btn btn-info  fa fa-edit"> Edit</a>
+                                        <td class="categories">
+                                            <div class="cat">
+                                            <div class="btns ">
+                                            <a href="manage-cat.php?do=Edit&catid=<?php echo $cat_id ?>" name="Edit"
+                                               class="btn btn-info  fa fa-edit circle-clipper"></a>
                                             <a href="manage-cat.php?do=delete&catid=<?php echo $cat_id ?>"
-                                               name=" delete" class="btn btn-danger fa fa-trash-o"> Delete</a>
-                                            <a href="manage-cat.php?do=Update&catid=<?php echo $cat_id  ?>" class="btn btn-success fa fa-adn">
-                                                Active</a>
+                                               name=" delete" class="btn btn-danger circle fa fa-trash-o"></a>
+                                            </div>
+                                            </div>
+
                                         </td>
 
 
@@ -143,7 +146,7 @@ if($do == 'Manage') {
 
 
 }
-elseif ($do =='addNew') {
+elseif ($do  =='addNew') {
 
     $in_data =' <div class="alert alert-primary" role="alert">data inserted</div>';
     $ino_data =' <div class="alert alert-danger" role="alert">not insert</div>';
@@ -152,7 +155,7 @@ elseif ($do =='addNew') {
         $info = [
 
             'Cat_name'          =>$_POST['Cat_Name'],
-            'updated_by'        =>$_POST['create_by'],
+           // 'updated_by'        =>$_POST['create_by'],
             'update_date'      =>$_POST['create_date'],
             'category_status'    =>$_POST['category_status'],
             'parent'           =>$_POST['parent']
@@ -187,10 +190,11 @@ elseif ($do =='addNew') {
                 <input type="text" class="form-control"  id="Cat_Name " name ="Cat_Name" placeholder="Enter Category Name">
 
             </div>
+            <!--
             <div class="form-group">
                 <label for="create_by">Updated By</label>
                 <input type="text" class="form-control" name="create_by" placeholder="Created By Name">
-            </div>
+            </div>-->
             <div class="form-group">
                 <label for="CD">Updated  date </label>
                 <input type="Date"  name="create_date" class="form-control">

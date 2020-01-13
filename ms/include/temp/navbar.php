@@ -1,7 +1,6 @@
 <?php
 include "../cpl/classes/DB.class.php";
 include '../cpl/Controler/categories.cont.php';
-include '../cpl/Controler/categories.cont.php';
 include '../cpl/Model/categoreis.mod.php';
 
 
@@ -90,27 +89,3 @@ include '../cpl/Model/categoreis.mod.php';
 
 
 
-<!-- ##### Breaking News Area Start ##### -->
-
-<section class="breaking-news-area clearfix">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-
-                <div class="breaking-news-ticker d-flex flex-wrap align-items-center">
-                    <div class="title">
-                        <h6>Trending</h6>
-                    </div>
-                    <div id="breakingNewsTicker" class="ticker">
-                        <ul>
-                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum.</a></li>
-                            <li><a href="#">Welcome to Colorlib Family.</a></li>
-                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ##### Breaking News Area End ##### -->
